@@ -1,8 +1,11 @@
 class GoalsController < ApplicationController
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
   # GET /goals
   # GET /goals.json
   def index
     @goals = Goal.all
+    #@goals = current_user.goals.find(params[:id])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -81,3 +84,5 @@ class GoalsController < ApplicationController
     end
   end
 end
+
+
