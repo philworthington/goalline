@@ -10,7 +10,7 @@ group :production do
   gem 'pg'
 end
 
-gem "strong_parameters"
+#gem "strong_parameters"
 
 gem "pundit"
 

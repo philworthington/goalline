@@ -4,7 +4,8 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    @goals = current_user.goals.where(user_id == current_user.id)
+    @goals = Goal.all
+    #@goals = current_user.goals.where(current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb

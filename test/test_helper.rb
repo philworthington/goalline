@@ -20,7 +20,14 @@ class ActiveSupport::TestCase
   def sign_in
     visit new_user_session_path
     fill_in "Email", with: users(:one).email
-    fill_in "Password", with: "password"
+    fill_in "Password", with: users(:one).encrypted_password
     click_on "Sign in"
+  end
+
+  def sign_up
+    visit new_user_registration_path
+    fill_in "Email", with: users(:one).email
+    fill_in "Password", with: users(:one).encrypted_password
+    click_on "Sign up"
   end
 end

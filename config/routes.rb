@@ -2,6 +2,10 @@ Goalline::Application.routes.draw do
 
   devise_for :users
 
+  devise_scope :user do
+    get 'sign_out', to: 'devise/sessions#destroy', as: :sign_out
+  end
+
   resources :goals do
     resources :plays
   end
