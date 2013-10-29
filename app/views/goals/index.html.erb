@@ -1,7 +1,8 @@
-<h1>Listing goals</h1>
+<h1>Goallines</h1>
 
 <table>
   <tr>
+    <th>Name</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,7 +10,8 @@
 
 <% @goals.each do |goal| %>
   <tr>
-    <td><%= link_to 'Show', goal %></td>
+    <td><%= link_to goal.name, goal_plays_path(goal) %></td>
+    <!-- <td><%= link_to 'Show', goal %></td> -->
     <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
     <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

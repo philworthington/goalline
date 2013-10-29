@@ -40,7 +40,7 @@ class GoalsController < ApplicationController
   # POST /goals
   # POST /goals.json
   def create
-    @goal = Goal.new(goal_params)
+    @goal = Goal.new(params[:goal])
 
     respond_to do |format|
       if @goal.save
@@ -53,13 +53,13 @@ class GoalsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /goals/1
-  # PATCH/PUT /goals/1.json
+  # PUT /goals/1
+  # PUT /goals/1.json
   def update
     @goal = Goal.find(params[:id])
 
     respond_to do |format|
-      if @goal.update_attributes(goal_params)
+      if @goal.update_attributes(params[:goal])
         format.html { redirect_to @goal, notice: 'Goal was successfully updated.' }
         format.json { head :no_content }
       else
@@ -80,13 +80,4 @@ class GoalsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  private
-
-    # Use this method to whitelist the permissible parameters. Example:
-    # params.require(:person).permit(:name, :age)
-    # Also, you can specialize this method with per-user checking of permissible attributes.
-    def goal_params
-      params.require(:goal).permit()
-    end
 end

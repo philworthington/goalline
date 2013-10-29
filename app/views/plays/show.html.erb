@@ -1,5 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <b>play:</b>
+  <%= @play.play %>
+</p>
 
-<%= link_to 'Edit', edit_play_path(@play) %> |
-<%= link_to 'Back', plays_path %>
+<p>
+  <b>Notes:</b>
+  <%= @play.notes %>
+</p>
+
+<!--<p>
+  <b>Goal:</b>
+  <%= @play.goal_id %>
+</p>-->
+
+
+<%= link_to 'Edit', edit_goal_play_path(@goal, @play) %> |
+<%= link_to 'Back', goal_plays_path(@goal) %>

@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <b>Name:</b>
+  <%= @goal.name %>
+</p>
 
+<%= link_to 'Create plays', new_goal_play_path(@goal, @play) %> |
 <%= link_to 'Edit', edit_goal_path(@goal) %> |
 <%= link_to 'Back', goals_path %>

@@ -1,8 +1,9 @@
 class PlaysController < ApplicationController
+  before_filter :load_goal
   # GET /plays
   # GET /plays.json
   def index
-    @plays = Play.all
+    @plays = @goal.plays.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,7 @@ class PlaysController < ApplicationController
   # GET /plays/1
   # GET /plays/1.json
   def show
-    @play = Play.find(params[:id])
+    @play = @goal.plays.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +25,7 @@ class PlaysController < ApplicationController
   # GET /plays/new
   # GET /plays/new.json
   def new
-    @play = Play.new
+    @play = @goal.plays.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +35,17 @@ class PlaysController < ApplicationController
 
   # GET /plays/1/edit
   def edit
-    @play = Play.find(params[:id])
+    @play = @goal.plays.find(params[:id])
   end
 
   # POST /plays
   # POST /plays.json
   def create
-    @play = Play.new(play_params)
+    @play = @goal.plays.new(params[:play])
 
     respond_to do |format|
       if @play.save
-        format.html { redirect_to @play, notice: 'Play was successfully created.' }
+        format.html { redirect_to [@goal, @play], notice: 'play was successfully created.' }
         format.json { render json: @play, status: :created, location: @play }
       else
         format.html { render action: "new" }
@@ -53,14 +54,14 @@ class PlaysController < ApplicationController
     end
   end
 
-  # PATCH/PUT /plays/1
-  # PATCH/PUT /plays/1.json
+  # PUT /plays/1
+  # PUT /plays/1.json
   def update
     @play = Play.find(params[:id])
 
     respond_to do |format|
-      if @play.update_attributes(play_params)
-        format.html { redirect_to @play, notice: 'Play was successfully updated.' }
+      if @play.update_attributes(params[:play])
+        format.html { redirect_to @play, notice: 'play was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -72,7 +73,7 @@ class PlaysController < ApplicationController
   # DELETE /plays/1
   # DELETE /plays/1.json
   def destroy
-    @play = Play.find(params[:id])
+    @play = @goal.play.find(params[:id])
     @play.destroy
 
     respond_to do |format|
@@ -82,11 +83,7 @@ class PlaysController < ApplicationController
   end
 
   private
-
-    # Use this method to whitelist the permissible parameters. Example:
-    # params.require(:person).permit(:name, :age)
-    # Also, you can specialize this method with per-user checking of permissible attributes.
-    def play_params
-      params.require(:play).permit()
+    def load_goal
+      @goal = Goal.find(params[:goal_id])
     end
 end
