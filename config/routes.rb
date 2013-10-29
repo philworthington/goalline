@@ -1,13 +1,12 @@
 Goalline::Application.routes.draw do
 
-  devise_for :users do
-    root :to => 'devise/sessions#new'
-  end
+  devise_for :users
 
   resources :goals do
     resources :plays
   end
 
+  root to: 'goals#index'
 
 
   # The priority is based upon order of creation:

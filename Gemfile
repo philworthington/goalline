@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.14'
+gem 'rails', '3.2.15'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -36,7 +36,7 @@ group :development, :test do
   gem "minitest-rails-capybara"
   gem "minitest-focus"
   gem "minitest-colorize"
-  gem "capybara-webkit"
+#  gem "capybara-webkit"
   gem "launchy"
   gem 'simplecov', :require => false, :group => :test
 end
