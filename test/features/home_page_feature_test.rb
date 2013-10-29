@@ -12,6 +12,8 @@ feature "home page" do
 
   scenario "logged in " do
     # Given a user logged in
+    sign_up
+
     sign_in
     # When I visit the home page
     visit root_path
@@ -22,7 +24,7 @@ feature "home page" do
   scenario "sign up" do
     # Given a user needs to register
     sign_up
-    page.must_have_content "Welcome! You have signed up successfully"
+    page.must_have_content "Sign Out"
   end
 
 
