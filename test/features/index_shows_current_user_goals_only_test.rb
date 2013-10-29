@@ -5,8 +5,6 @@ feature "goals index" do
 
     sign_up
 
-    sign_in
-    save_and_open_page
     click_on "New Goal"
 
     fill_in "Name", with: "Test 100"
@@ -15,7 +13,7 @@ feature "goals index" do
 
     click_on "Back"
 
-    page.must_not_have_content "test 3"
+    page.text.wont_include "test 3"
 
   end
 end

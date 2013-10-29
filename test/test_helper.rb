@@ -19,15 +19,16 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   def sign_in
     visit new_user_session_path
-    fill_in "Email", with: users(:one).email
-    fill_in "Password", with: users(:one).encrypted_password
+    fill_in "Email", with: "testy@test.com"
+    fill_in "Password", with: "password"
     click_on "Sign in"
   end
 
   def sign_up
     visit new_user_registration_path
-    fill_in "Email", with: users(:one).email
-    fill_in "Password", with: users(:one).encrypted_password
+    fill_in "Email", with: "testy@test.com"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
     click_on "Sign up"
   end
 end
