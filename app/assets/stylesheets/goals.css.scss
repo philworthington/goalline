@@ -6,9 +6,14 @@
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }*/
 
+html, body {
+    height: 100%;
+}
+
 .page-container {
+  min-height: 100%;
   display: table;
-  height: 650px;
+  height: 100%;
   width: 100%;
   position: relative;
   background-image: url('signin_field.jpg');
@@ -58,6 +63,18 @@
   font-size: 2.6em;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.label {
+  display: none;
+}
+
+.remember_me {
+  text-decoration: none;
+  margin-top: 10px;
+  font-style: normal;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   padding-bottom: 10px;
 }
 
