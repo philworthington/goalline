@@ -1,3 +1,29 @@
 // Place all the styles related to the goals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar {
+  border-radius: 0px;
+}
+
+.navbar-inverse .navbar-brand {
+color: #fff;
+}
+
+.navbar-inverse .navbar-brand:hover {
+color: #999999;
+}
+
+.navbar-inverse .navbar-text {
+color: #fff;
+}
+
+.navbar-inverse .navbar-link {
+color: #fff;
+}
+
+.navbar-inverse .navbar-link:hover {
+color: #999999;
+}
+
+
