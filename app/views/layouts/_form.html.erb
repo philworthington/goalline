@@ -2,10 +2,10 @@
     <nav class="navbar navbar-inverse" role="navigation">
       <a class="navbar-brand" href="/"> <img src="/images/logo1.png"></a>
 
-      <button type="button" class="btn btn-default navbar-btn pull-right"><%= link_to "Sign Out", sign_out_path %></button>
+      <button type="button" class="btn btn-success navbar-btn pull-right signout"><%= link_to "Sign Out", sign_out_path %></button>
       <p class="navbar-text pull-left"><a href="/goals" class="navbar-link">Dashboard</a></p>
       <% if user_signed_in? %>
-      <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link"><%= link_to current_user.email, edit_user_registration_path %></a></p>
+      <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link current-email"><%= link_to current_user.email, edit_user_registration_path %></a></p>
       <% end %>
 
 
