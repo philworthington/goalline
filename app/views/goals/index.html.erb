@@ -1,24 +1,29 @@
 <%= render 'layouts/form' %>
-<h1>Goallines</h1>
+<div class="dashboard">
+  <div class="dash-content">
+    <h1>Goallines</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<% @goals.each do |goal| %>
-  <tr>
-    <td><%= link_to goal.name, goal_plays_path(goal) %></td>
-    <!-- <td><%= link_to 'Show', goal %></td> -->
-    <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-    <td><%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <% @goals.each do |goal| %>
+      <tr class="goals-table">
+        <td><%= link_to goal.name, goal_plays_path(goal) %></td>
+        <!-- <td><%= link_to 'Show', goal %></td> -->
+        <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
+        <td><%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<br />
 
-<%= link_to 'New Goal', new_goal_path %>
+    <br />
+
+    <%= link_to 'New Goal', new_goal_path %>
+  </div>
+</div>
