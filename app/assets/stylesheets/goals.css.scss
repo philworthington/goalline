@@ -6,9 +6,13 @@
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }*/
 
+html, body {
+  height: 100%;
+}
+
 .page-container {
   display: table;
-  height: 650px;
+  height: 100%;
   width: 100%;
   position: relative;
   background-image: url('signin_field.jpg');
@@ -67,6 +71,7 @@
 
 .navbar-inverse .navbar-brand {
 color: #fff;
+
 }
 
 .navbar-inverse .navbar-brand:hover {
@@ -83,6 +88,17 @@ color: #fff;
 
 .navbar-inverse .navbar-link:hover {
 color: #999999;
+}
+
+.navbar-text {
+  font-family: "open sans", "Helvetica", "Arial","sans-serif";
+  padding-top: 11px;
+  font-size: 15px;
+}
+
+.navbar-btn {
+  margin-top: 18px;
+  margin-right: 25px;
 }
 
 
