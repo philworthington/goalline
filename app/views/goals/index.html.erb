@@ -1,37 +1,31 @@
 <%= render 'layouts/form' %>
 <div class="dashboard">
-  <div class="dash-content">
+  <h1>Goallines&nbsp;<i class="fa fa-tasks"></i></h1>
+    <div class="pull-up">
+      <div class="new-button"><%= link_to 'New Goal', new_goal_path, :class => "new-link btn btn-default" %></div>
+        <br>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
 
-    <h1>Goallines&nbsp;<i class="fa fa-tasks"></i></h1>
-    <div>fjhfla</div>
-
-    <table>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-
-    <% @goals.each do |goal| %>
-      <tr class="goals-table">
-        <td class="goal-names"><%= link_to goal.name, goal_plays_path(goal) %></td>
-        <!-- <td><%= link_to 'Show', goal %></td> -->
-        <td class="e-icon"><%= link_to edit_goal_path(goal) do %>
-              <i class="fa fa-pencil-square-o"></i>
-            <% end %>
-        </td>
-        <td class="d-icon"><%= link_to goal, method: :delete, data: { confirm: 'Are you sure?' } do %>
-              <i class="fa fa-trash-o"></i>
-            <% end %>
-        </td>
-      </tr>
-    <% end %>
-    </table>
-
-
-    <br />
-
-    <%= link_to 'New Goal', new_goal_path, :class => "new-link btn btn-default" %>
-  </div>
+          <% @goals.each do |goal| %>
+            <tr class="goals-table">
+              <td class="goal-names"><%= link_to goal.name, goal_plays_path(goal) %></td>
+              <!-- <td><%= link_to 'Show', goal %></td> -->
+              <td class="e-icon"><%= link_to edit_goal_path(goal) do %>
+                    <i class="fa fa-pencil-square-o"></i>
+                  <% end %>
+              </td>
+              <td class="d-icon"><%= link_to goal, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <i class="fa fa-trash-o"></i>
+                  <% end %>
+              </td>
+            </tr>
+          <% end %>
+          </table>
+    </div>
 </div>

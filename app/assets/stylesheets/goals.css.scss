@@ -310,6 +310,7 @@ text-decoration: none;
   opacity: .97;
   color: #222;
   border: #eee solid 1px;
+  overflow:auto;
 }
 
 .dashboard h1 {
@@ -341,6 +342,11 @@ text-decoration: none;
   color: #333;
 }
 
+.pull-up {
+  position: relative;
+  top: -47px;
+}
+
 .e-icon {
   padding-left: 10px;
   padding-right: 10px;
@@ -368,6 +374,13 @@ text-decoration: none;
 .goals-table td:hover {
   background-color: #e3e3e3;
 }
+
+.new-button {
+  padding-bottom: 10px;
+  padding-right: 35px;
+  text-align: right;
+}
+
 
 
 
