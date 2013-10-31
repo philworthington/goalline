@@ -46,7 +46,7 @@ class GoalsController < ApplicationController
     respond_to do |format|
       if @goal.save
         current_user.goals << @goal
-        format.html { redirect_to @goal, notice: 'Goal was successfully created.' }
+        format.html { redirect_to @goal, notice: 'Goalline created successfully.' }
         format.json { render json: @goal, status: :created, location: @goal }
       else
         format.html { render action: "new" }
