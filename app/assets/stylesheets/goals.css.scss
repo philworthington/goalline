@@ -382,8 +382,6 @@ text-decoration: none;
 }
 
 
-
-
 /**************************/
 /******** NEW GOAL ********/
 /**************************/
@@ -470,8 +468,41 @@ text-decoration: none;
 
 
 
+/**************************/
+/******* GOAL SHOW ********/
+/**************************/
+
+.goal_name {
+  font-size: 1.5em;
+}
+
+.dash-inner {
+  position: relative;
+  vertical-align: middle;
+  top: 65px;
+}
+
+.show-links {
+  position: relative;
+  margin-top: 22px;
+}
 
 
+
+
+/**************************/
+/******** PLAYBOOK ********/
+/**************************/
+
+.goal_name_pb {
+  position: relative;
+  margin-top: 27px;
+}
+
+
+.goalline-dash table th {
+  display: none;
+}
 
 
 
