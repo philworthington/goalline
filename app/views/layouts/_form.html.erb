@@ -6,7 +6,7 @@
       <button type="button" class="btn btn-success navbar-btn pull-right signout"><%= link_to "Sign Out", sign_out_path, :class => "so-button" %></button>
       <p class="navbar-text pull-left"><i class="fa fa-tachometer"></i><a href="/goals" class="navbar-link-space">Dashboard</a></p>
       <% if user_signed_in? %>
-      <p class="navbar-text pull-right"><i class="fa fa-user"></i>Signed in as <a href="#" class="navbar-link current-email"><%= link_to current_user.email, edit_user_registration_path %></a></p>
+      <p class="navbar-text pull-right"><i class="fa fa-user"></i>&nbsp; Signed in as <a href="#" class="navbar-link current-email"><%= link_to current_user.email, edit_user_registration_path %></a></p>
       <% end %>
 
 
