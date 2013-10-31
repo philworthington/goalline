@@ -17,7 +17,7 @@ body {
   display: table;
   height: 100%;
   width: 100%;
-  background-image: url('field.jpg');
+  background-image: url('field2.jpg');
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -73,7 +73,7 @@ body {
   width: 370px;
   height: 370px;
   border-radius: 10px;
-  opacity: .9;
+  opacity: .97;
   color: #222;
   border: #eee solid 1px;
 }
@@ -233,6 +233,10 @@ text-decoration: none;
   color: #ddd;
 }
 
+.so-button {
+  font-family: "open sans", "Helvetica", "Arial","sans-serif";
+}
+
 
 /**************************/
 /******* DASHBOARD ********/
@@ -251,7 +255,7 @@ text-decoration: none;
   width: 370px;
   height: 370px;
   border-radius: 10px;
-  opacity: .9;
+  opacity: .97;
   color: #222;
   border: #eee solid 1px;
 }
@@ -262,6 +266,27 @@ text-decoration: none;
 
 .dashboard table th {
   display: none;
+}
+
+.dashboard table {
+  text-align: center;
+  margin: 0 auto;
+  color: #222;
+}
+
+.dashboard table a {
+  display: block;
+  color: #222;
+  font-size: 1.2em;
+  padding-top: 5px;
+}
+
+.dashboard table a:hover {
+  /*text-decoration: none;*/
+}
+
+.new-link {
+  color: #555;
 }
 
 .goals-table a {
