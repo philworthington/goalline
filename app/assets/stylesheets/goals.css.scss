@@ -294,35 +294,5 @@ text-decoration: none;
   margin: 0 auto;
 }
 
-/**************************/
-/******* SCOREBOARD *******/
-/**************************/
-
-
-.scoreboard {
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  top: 20px;
-  vertical-align: top;
-  text-align: center;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  padding-top: 10px;
-  background-color: #fff;
-  width: 370px;
-  height: 370px;
-  border-radius: 10px;
-  opacity: .9;
-  color: #222;
-  border: #eee solid 1px;
-}
-
-.scoreboard h1 {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-}
-
-.scoreboard table th {
-  display: none;
-}
 
 

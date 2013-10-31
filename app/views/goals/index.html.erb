@@ -15,8 +15,14 @@
       <tr class="goals-table">
         <td><%= link_to goal.name, goal_plays_path(goal) %></td>
         <!-- <td><%= link_to 'Show', goal %></td> -->
-        <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-        <td><%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to edit_goal_path(goal) do %>
+              <i class="fa fa-pencil-square-o"></i>
+            <% end %>
+        </td>
+        <td><%= link_to goal, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="fa fa-trash-o"></i>
+            <% end %>
+        </td>
       </tr>
     <% end %>
     </table>
