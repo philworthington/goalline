@@ -304,7 +304,7 @@ text-decoration: none;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   padding-top: 10px;
   background-color: #fff;
-  width: 470px;
+  width: 580px;
   height: 370px;
   border-radius: 10px;
   opacity: .97;
@@ -341,9 +341,32 @@ text-decoration: none;
   color: #333;
 }
 
-.goals-table a {
-  text-align: center;
-  margin: 0 auto;
+.e-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.d-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.goal-names {
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.goals-table {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.goals-table td:hover {
+  background-color: #e3e3e3;
 }
 
 

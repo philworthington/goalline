@@ -1,7 +1,9 @@
 <%= render 'layouts/form' %>
 <div class="dashboard">
   <div class="dash-content">
-    <h1>Goallines</h1>
+
+    <h1>Goallines&nbsp;<i class="fa fa-tasks"></i></h1>
+    <div>fjhfla</div>
 
     <table>
       <tr>
@@ -13,13 +15,13 @@
 
     <% @goals.each do |goal| %>
       <tr class="goals-table">
-        <td><%= link_to goal.name, goal_plays_path(goal) %></td>
+        <td class="goal-names"><%= link_to goal.name, goal_plays_path(goal) %></td>
         <!-- <td><%= link_to 'Show', goal %></td> -->
-        <td><%= link_to edit_goal_path(goal) do %>
+        <td class="e-icon"><%= link_to edit_goal_path(goal) do %>
               <i class="fa fa-pencil-square-o"></i>
             <% end %>
         </td>
-        <td><%= link_to goal, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <td class="d-icon"><%= link_to goal, method: :delete, data: { confirm: 'Are you sure?' } do %>
               <i class="fa fa-trash-o"></i>
             <% end %>
         </td>

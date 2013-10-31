@@ -4,5 +4,5 @@ class Goal < ActiveRecord::Base
   has_many :plays
 
   validates :name, presence: true,
-               length: { maximum: 140 }
+               length: { maximum: 45 }
 end
