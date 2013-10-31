@@ -304,7 +304,7 @@ text-decoration: none;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   padding-top: 10px;
   background-color: #fff;
-  width: 470px;
+  width: 580px;
   height: 370px;
   border-radius: 10px;
   opacity: .97;
@@ -344,6 +344,18 @@ text-decoration: none;
 .goals-table a {
   text-align: center;
   margin: 0 auto;
+}
+
+.goals-table td {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.goals-table td:hover {
+  background-color: #e3e3e3;
 }
 
 
@@ -434,8 +446,41 @@ text-decoration: none;
 
 
 
+/**************************/
+/******* GOAL SHOW ********/
+/**************************/
+
+.goal_name {
+  font-size: 1.5em;
+}
+
+.dash-inner {
+  position: relative;
+  vertical-align: middle;
+  top: 65px;
+}
+
+.show-links {
+  position: relative;
+  margin-top: 22px;
+}
 
 
+
+
+/**************************/
+/******** PLAYBOOK ********/
+/**************************/
+
+.goal_name_pb {
+  position: relative;
+  margin-top: 27px;
+}
+
+
+.goalline-dash table th {
+  display: none;
+}
 
 
 
