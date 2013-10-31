@@ -1,6 +1,9 @@
 <%= render 'layouts/form' %>
-<h1>New goal</h1>
 
-<%= render 'form' %>
+<div class="goalline-dash">
+  <h1>Create a Goalline</h1>
 
-<%= link_to 'Back', goals_path %>
+  <%= render 'form' %>
+
+  <%= link_to 'Back', goals_path, :class => "back-btn back-link" %>
+</div>

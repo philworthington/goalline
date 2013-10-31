@@ -10,13 +10,13 @@
       </ul>
     </div>
   <% end %>
-
+  <p class="view-tag">What do you want to do?</p>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name, :class => "label" %><br />
+    <%= f.text_field :name, :placeholder => "ex. - I want to learn the rules of football so I can be cool.", :class => "form_field_long" %>
   </div>
-  <p>max 140 characters</p>
+  <p class="description">Keep it simple. You have 140 characters.</p>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "New Goalline", :class => "btn btn-success btn-lg so-button" %>
   </div>
 <% end %>
