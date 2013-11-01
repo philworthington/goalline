@@ -1,7 +1,10 @@
 <%= render 'layouts/form' %>
-<h1>Editing play</h1>
+<div class="play-dash">
+  <h1>Edit Play</h1>
 
-<%= render 'form' %>
+  <p class="view-tag">Call an audible.</p>
+  <%= render 'form' %>
 
-<%= link_to 'Show', goal_play_path(@goal, @play) %> |
-<%= link_to 'Back', goal_plays_path(@goal) %>
+  <%= link_to 'Back', goal_play_path(@goal, @play), :class => "back-link" %> <span class="back-link">|</span>
+  <%= link_to 'Playbook', goal_plays_path(@goal), :class => "back-link" %>
+</div>

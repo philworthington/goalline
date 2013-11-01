@@ -1,6 +1,9 @@
 <%= render 'layouts/form' %>
-<h1>New play</h1>
+<div class="play-dash">
+  <h1>Create a Play</h1>
 
-<%= render 'form' %>
+  <p class="view-tag">What can you do next?</p>
+  <%= render 'form' %>
 
-<%= link_to 'Back', goal_plays_path(@goal) %>
+  <%= link_to 'Back', goal_plays_path(@goal), :class => "back-link" %>
+</div>

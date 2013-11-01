@@ -1,6 +1,6 @@
 <%= render 'layouts/form' %>
-<div class="goalline-dash">
-  <h2 class="goal_name goal_name_pb"><%= @goal.name %></h2>
+<div class="dashboard">
+  <p class="goal_name_pb"><%= @goal.name %></p>
   <h1>Playbook&nbsp;<i class="fa fa-book"></i></h1>
 
   <table>
@@ -13,19 +13,26 @@
     </tr>
 
   <% @plays.each do |play| %>
-    <tr>
-      <td><%= play.play %></td>
-      <td><%= play.notes %></td>
+    <tr class="goals-table">
+      <td class="goal-names"><%= link_to play.play, goal_play_path(@goal, play) %></td>
+      <!-- <td><%= play.notes %></td> -->
       <!-- <td><%= play.goal_id %></td> -->
-      <td><%= link_to 'Show', goal_play_path(@goal, play) %></td>
-      <td><%= link_to 'Edit', edit_goal_play_path(@goal, play) %></td>
-      <td><%= link_to 'Destroy', [@goal, play], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+      <!-- <td><%= link_to 'Show', goal_play_path(@goal, play) %></td> -->
+      <td class="e-icon"><%= link_to edit_goal_play_path(@goal, play) do %>
+          <i class="fa fa-pencil-square-o"></i>
+        <% end %>
+      </td>
+      <td class="d-icon"><%= link_to [@goal, play], method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash-o"></i>
+          <% end %>
+      </td>
   <% end %>
   </table>
 
   <br />
 
-  <%= link_to 'Goallines', goals_path, :class => "back-link" %> |
-  <%= link_to 'New play', new_goal_play_path(@goal) %>
+  <%= link_to 'New Play', new_goal_play_path(@goal), :class => "btn btn-success btn-lg" %>
+  <br>
+  <%= link_to 'Back', goals_path, :class => "back-link" %>
+
 </div>
