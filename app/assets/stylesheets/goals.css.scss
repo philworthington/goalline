@@ -305,7 +305,7 @@ text-decoration: none;
   padding-top: 10px;
   background-color: #fff;
   width: 580px;
-  height: 370px;
+  height: 430px;
   border-radius: 10px;
   opacity: .97;
   color: #222;
@@ -325,6 +325,7 @@ text-decoration: none;
   text-align: center;
   margin: 0 auto;
   color: #222;
+
 }
 
 .dashboard table a {
@@ -345,6 +346,11 @@ text-decoration: none;
 .pull-up {
   position: relative;
   top: -47px;
+}
+
+.pull-up table {
+  position: relative;
+  top: 6px;
 }
 
 .e-icon {
@@ -375,10 +381,8 @@ text-decoration: none;
   background-color: #e3e3e3;
 }
 
-.new-button {
-  padding-bottom: 10px;
-  padding-right: 35px;
-  text-align: right;
+.new-right {
+  padding-left: 435px;
 }
 
 
