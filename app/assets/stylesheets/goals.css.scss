@@ -310,7 +310,7 @@ text-decoration: none;
   opacity: .97;
   color: #222;
   border: #eee solid 1px;
-  overflow:auto;
+  overflow: auto;
 }
 
 .dashboard h1 {
@@ -375,6 +375,7 @@ text-decoration: none;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  min-width: 90%;
 }
 
 .goals-table td:hover {
@@ -383,6 +384,23 @@ text-decoration: none;
 
 .new-right {
   padding-left: 435px;
+}
+
+.table-content {
+  position: relative;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.view-tag-dash {
+  font-size: 1.15em;
+  font-style: italic;
+  color: #333;
+  margin-top: -10px;
 }
 
 
@@ -533,6 +551,20 @@ text-decoration: none;
   display: none;
 }
 
+.playbookh1 {
+  margin-bottom: 18px;
+}
+
+.table-content-pb {
+  position: relative;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 6px;
+  padding-bottom: 16px;
+}
 
 
 
@@ -557,6 +589,10 @@ text-decoration: none;
   opacity: .97;
   color: #222;
   border: #eee solid 1px;
+}
+
+.play-dash h1 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 .form_field_notes {
