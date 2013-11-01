@@ -61,7 +61,7 @@ class PlaysController < ApplicationController
 
     respond_to do |format|
       if @play.update_attributes(params[:play])
-        format.html { redirect_to @play, notice: 'play was successfully updated.' }
+        format.html { redirect_to goal_plays_path, notice: 'play was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

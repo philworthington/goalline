@@ -46,4 +46,12 @@ class ActiveSupport::TestCase
     # I should see the login form
     page.text.must_include 'Goalline created successfully.'
   end
+
+  def new_play
+    click_on "Create Plays"
+
+    fill_in "Play", with: "play1000"
+    fill_in "Notes", with: "notes1000"
+    click_on "Create Play"
+  end
 end

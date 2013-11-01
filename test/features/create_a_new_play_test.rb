@@ -7,13 +7,9 @@ feature "create a new play" do
     new_goal
 
     # User creates new play in that goal's playbook
-    click_on "Create Plays"
+    new_play
 
-    fill_in "Play", with: "play1000"
-    fill_in "Notes", with: "notes1000"
-    click_on "Create Play"
-
-    # I should see the goal's playbook index
-    page.text.must_include "Goallines"
+    # I should see the goal's playbook
+    page.text.must_include "Playbook"
   end
 end
