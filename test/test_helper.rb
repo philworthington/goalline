@@ -33,4 +33,17 @@ class ActiveSupport::TestCase
     fill_in "Password confirmation", with: "password"
     click_on "Sign up"
   end
+
+  def new_goal
+    # Given a logged on user
+    sign_up
+
+    # Visit new goal page and fill out the form
+    visit new_goal_path
+    fill_in "Name", with: "Test 1000"
+    click_on "New Goalline"
+
+    # I should see the login form
+    page.text.must_include 'Goalline created successfully.'
+  end
 end

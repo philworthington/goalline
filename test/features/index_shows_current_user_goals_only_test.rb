@@ -5,11 +5,11 @@ feature "goals index" do
 
     sign_up
 
-    click_on "New Goal"
+    visit new_goal_path
 
     fill_in "Name", with: "Test 100"
 
-    click_on "Create Goal"
+    click_on "New Goalline"
 
     click_on "Back"
 
