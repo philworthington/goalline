@@ -1,34 +1,37 @@
 <%= render 'layouts/form' %>
 <div class="dashboard">
   <p class="goal_name_pb"><%= @goal.name %></p>
-  <h1>Playbook&nbsp;<i class="fa fa-book"></i></h1>
+  <h1 class="playbookh1">Playbook&nbsp;<i class="fa fa-book"></i></h1>
 
-  <table>
-    <tr>
-      <th>Play</th>
-      <th>Notes</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
+  <p class="view-tag-dash">The ball is in your hands Coach.<br>Call a play to get closer to the Goalline.</p>
 
-  <% @plays.each do |play| %>
-    <tr class="goals-table">
-      <td class="goal-names"><%= link_to play.play, goal_play_path(@goal, play) %></td>
-      <!-- <td><%= play.notes %></td> -->
-      <!-- <td><%= play.goal_id %></td> -->
-      <!-- <td><%= link_to 'Show', goal_play_path(@goal, play) %></td> -->
-      <td class="e-icon"><%= link_to edit_goal_play_path(@goal, play) do %>
-          <i class="fa fa-pencil-square-o"></i>
-        <% end %>
-      </td>
-      <td class="d-icon"><%= link_to [@goal, play], method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <i class="fa fa-trash-o"></i>
+  <div class="table-content-pb">
+    <table>
+      <tr>
+        <th>Play</th>
+        <th>Notes</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @plays.each do |play| %>
+      <tr class="goals-table">
+        <td class="goal-names"><%= link_to play.play, goal_play_path(@goal, play) %></td>
+        <!-- <td><%= play.notes %></td> -->
+        <!-- <td><%= play.goal_id %></td> -->
+        <!-- <td><%= link_to 'Show', goal_play_path(@goal, play) %></td> -->
+        <td class="e-icon"><%= link_to edit_goal_play_path(@goal, play) do %>
+            <i class="fa fa-pencil-square-o"></i>
           <% end %>
-      </td>
-  <% end %>
-  </table>
-
+        </td>
+        <td class="d-icon"><%= link_to [@goal, play], method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="fa fa-trash-o"></i>
+            <% end %>
+        </td>
+    <% end %>
+    </table>
+  </div>
   <br />
 
   <%= link_to 'New Play', new_goal_play_path(@goal), :class => "btn btn-success btn-lg" %>
