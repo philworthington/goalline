@@ -1,21 +1,30 @@
 <%= render 'layouts/form' %>
-<p id="notice"><%= notice %></p>
+<div class="goalline-dash">
+  <div class = "dash-inner">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <b>play:</b>
-  <%= @play.play %>
-</p>
+    <p class="goal_name goal-play-show">
+      <%= @goal.name %>
+    </p>
+    <div class="play-show-text">
+      <p>
+        <b>Play:</b>
+        <%= @play.play %>
+      </p>
 
-<p>
-  <b>Notes:</b>
-  <%= @play.notes %>
-</p>
+      <p>
+        <b>Notes:</b>
+        <%= @play.notes %>
+      </p>
+    </div>
+    <!--<p>
+      <b>Goal:</b>
+      <%= @play.goal_id %>
+    </p>-->
 
-<!--<p>
-  <b>Goal:</b>
-  <%= @play.goal_id %>
-</p>-->
 
-
-<%= link_to 'Edit', edit_goal_play_path(@goal, @play) %> |
-<%= link_to 'Back', goal_plays_path(@goal) %>
+    <%= link_to 'Edit', edit_goal_play_path(@goal, @play), :class => "btn btn-default btn-lg" %>
+    <br>
+    <%= link_to 'Back', goal_plays_path(@goal), :class => "back-link" %>
+  </div>
+</div>

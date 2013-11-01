@@ -11,19 +11,21 @@
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= f.label :play %><br />
-    <%= f.text_field :play %>
+    <%= f.label :play, :class => "label" %><br />
+    <%= f.text_field :play, :placeholder => "Play goes here  (ex. - Today I will look up resources to buy.)", :class => "form_field_long" %>
   </div>
+  <p class="description_play">Keep it simple and actionable. You have 35 characters.</p>
   <div class="field">
-    <%= f.label :notes %><br />
-    <%= f.text_area :notes %>
+    <%= f.label :notes, :class => "label" %><br />
+    <%= f.text_area :notes, :placeholder => "Notes go here...", :class => "form_field_notes" %>
   </div>
   <!-- <div class="field">
     <%= f.label :goal_id %><br />
     <%= f.number_field :goal_id %>
   </div> -->
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Play", :class => "btn btn-success btn-lg link-down" %>
   </div>
 <% end %>
