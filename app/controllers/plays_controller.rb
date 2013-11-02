@@ -77,12 +77,13 @@ class PlaysController < ApplicationController
     @play.destroy
 
     respond_to do |format|
-      format.html { redirect_to plays_url }
+      format.html { redirect_to goal_plays_path }
       format.json { head :no_content }
     end
   end
 
   private
+
     def load_goal
       @goal = Goal.find(params[:goal_id])
     end
