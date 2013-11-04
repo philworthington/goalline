@@ -20,5 +20,8 @@ test:
 
 production:
   adapter: postgresql
-  database: goalline database
+  encoding: unicode
+  database: goalline_production
   pool: 5
+  username: goalline
+  password:
