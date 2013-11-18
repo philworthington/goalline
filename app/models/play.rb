@@ -1,5 +1,5 @@
 class Play < ActiveRecord::Base
-  attr_accessible :play, :notes, :goal_id
+  attr_accessible :play, :notes, :goal_id, :complete
   belongs_to :goal
   belongs_to :user
 
